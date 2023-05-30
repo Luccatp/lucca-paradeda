@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Sora } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const sora = Sora({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Lucca Paradeda',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className='min-h-screen bg-background font-sans antialiased grainy __variable_0ec1f4 __variable_deb966'>{children}</body>
+      <body className={`${sora.className} min-h-screen antialiased grainy __variable_0ec1f4 __variable_deb966`}>{children}</body>
     </html>
   )
 }
