@@ -1,6 +1,6 @@
 import HamburguerMenu from '@/components/HamburguerMenu'
 import Button from '@/components/ui/Button'
-import { Activity, AlignRight, ArrowBigRightDash, ArrowRightCircle, Bug, BugIcon, Circle, CircleDot, Copyright, Dot, File, Github, Home, Instagram, Linkedin, Loader2, Mail, Medal, MessageCircle, Mic, Paintbrush, Phone, PhoneCall, Pin, PoundSterling, TrendingUp } from 'lucide-react'
+import { Activity, AlignRight, ArrowBigRightDash, ArrowRightCircle, Bug, BugIcon, Circle, CircleDot, Copyright, Dot, File, Github, Home, Instagram, Linkedin, Loader2, Mail, Medal, MessageCircle, Mic, Paintbrush, Phone, PhoneCall, Pin, PoundSterling, TrendingUp, Verified } from 'lucide-react'
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -55,7 +55,7 @@ const page: FC<pageProps> = ({}) => {
                 </nav>
                 <section className='flex items-center md:pl-10'>
                     <div className='flex flex-col items-center md:items-start w-full gap-4'>
-                        <h1 className='text-5xl font-bold w-fit relative text-center md:text-left'>Hi, I am <Loader2 className='absolute -right-5 top-0 animate-spin -z-10'/> <br/> <span className='text-indigo-600 animate-pulse'>Lucca </span></h1>
+                        <h1 className='text-5xl font-bold w-fit relative text-center md:text-left'>Hi, I am <Verified className='absolute -right-5 top-0 animate-bounce -z-10'/> <br/> <span className='text-indigo-600 animate-pulse'>Lucca </span></h1>
                         <p className='text-gray-500 max-w-lg px-6 text-center md:text-left md:px-0'>A fullstack developer, with emphasis on frontend. Most of my work comes from my experience in brazilian companies and online courses, I am currently persuing my bachaleors degree on software Engeneering at PUCRS university</p>
                         <Link href='https://www.linkedin.com/in/luccaparadeda/' target='_blank'><Button className='w-fit'>Contact Me <TrendingUp className='ml-2' /></Button></Link>
                     </div>
