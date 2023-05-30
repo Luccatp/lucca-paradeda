@@ -1,12 +1,19 @@
 import HamburguerMenu from '@/components/HamburguerMenu'
 import Button from '@/components/ui/Button'
-import { Activity, AlignRight, ArrowBigRightDash, ArrowRightCircle, Bug, BugIcon, Circle, CircleDot, Copyright, Dot, File, Github, Home, Instagram, Linkedin, Loader2, Mail, Medal, MessageCircle, Mic, Phone, PhoneCall, Pin, PoundSterling, TrendingUp } from 'lucide-react'
+import { Activity, AlignRight, ArrowBigRightDash, ArrowRightCircle, Bug, BugIcon, Circle, CircleDot, Copyright, Dot, File, Github, Home, Instagram, Linkedin, Loader2, Mail, Medal, MessageCircle, Mic, Paintbrush, Phone, PhoneCall, Pin, PoundSterling, TrendingUp } from 'lucide-react'
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 interface pageProps {
   
+}
+
+export interface MenuLinks {
+    name: string
+    href: string
+    icon: React.ReactNode,
+    aboutBlank?: boolean
 }
 
 const menuLinks = [
@@ -17,17 +24,20 @@ const menuLinks = [
     }, 
     {
         name: 'About',
-        href: '/about',
+        href: 'https://www.instagram.com/luccaparadeda/',
+        aboutBlank: true,
         icon: <MessageCircle/>
     },
     {
         name: 'Projects',
-        href: '/projects',
+        href: 'https://github.com/Luccatp/Luccatp',
+        aboutBlank: true,
         icon: <File/>
     },
     {
         name: 'Contact',
-        href: '/contact',
+        href: 'https://www.linkedin.com/in/luccaparadeda/',
+        aboutBlank: true,
         icon: <Phone/>
     }
 ]
@@ -38,7 +48,7 @@ const page: FC<pageProps> = ({}) => {
             <div className='container max-w-7xl m-9 flex flex-col'>
                 <nav className='h-10 flex justify-between bg-indigo-800 rounded-2xl my-9 px-4 py-2'>
                     <div className='flex gap-4'>
-                        <Activity color='white' className='hidden md:block'/>
+                        <Paintbrush color='white' className='hidden md:block'/>
                         <h2 className='text-base font-bold text-indigo-50'>Lucca Paradeda</h2>
                     </div>
                     <HamburguerMenu options={menuLinks}/>

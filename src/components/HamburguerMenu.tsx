@@ -5,13 +5,10 @@ import Button from './ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AlignRight, Menu } from 'lucide-react'
+import { MenuLinks } from '@/app/(landing)/page'
 
 interface HamburguerMenuProps {
-  options: {
-    name: string
-    href: string
-    icon: React.ReactNode
-  }[]
+  options: MenuLinks[]
 }
 
 const HamburguerMenu: FC<HamburguerMenuProps> = ({options}) => {
@@ -27,8 +24,9 @@ const HamburguerMenu: FC<HamburguerMenuProps> = ({options}) => {
           <div className='flex flex-col items-end space-y-8'>
             {options.map((option) => (
               <div  key={option.name} className='flex gap-2'>
-                <Link href={option.href}>
+                <Link href={option.href} target={option.aboutBlank ? '_blank' : '_self'} className='group transition duration-300'>
                   {option.name} 
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-950"></span>
                 </Link>
                 {option.icon && option.icon}
               </div>
