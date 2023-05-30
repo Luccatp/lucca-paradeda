@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${sora.className} min-h-screen antialiased grainy __variable_0ec1f4 __variable_deb966`}>{children}</body>
+      <body className={`${sora.className} min-h-screen antialiased grainy`}>{children}</body>
     </html>
   )
 }

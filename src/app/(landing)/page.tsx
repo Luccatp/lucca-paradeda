@@ -46,7 +46,7 @@ const page: FC<pageProps> = ({}) => {
     return(
         <div className='flex flex-col items-center justify-center'>
             <div className='container max-w-7xl m-9 flex flex-col'>
-                <nav className='h-10 flex justify-between bg-indigo-800 rounded-2xl my-9 px-4 py-2'>
+                <nav className='h-10 flex justify-between bg-indigo-800 rounded-2xl my-9 mx-2 px-4 py-2'>
                     <div className='flex gap-4'>
                         <Paintbrush color='white' className='hidden md:block'/>
                         <h2 className='text-base font-bold text-indigo-50'>Lucca Paradeda</h2>
